@@ -1,0 +1,118 @@
+<app-header></app-header>
+
+<div class="container mt-4">
+<h2 class="text-center mb-4">Configuración</h2>
+
+<div class="card mb-4">
+    <div class="card-header">
+    <h3 class="card-title">Preferencias de Usuario</h3>
+    </div>
+    <div class="card-body">
+    <form>
+        <!-- Idioma -->
+        <div class="form-group mb-3">
+        <label for="languageSelect" class="form-label">Idioma</label>
+        <select class="form-control" id="languageSelect">
+            <option>Español</option>
+            <option>Inglés</option>
+            <!-- Otros idiomas -->
+        </select>
+        </div>
+        <!-- Tema -->
+        <div class="form-group mb-3">
+        <label for="themeSelect" class="form-label">Tema</label>
+        <select class="form-control" id="themeSelect">
+            <option>Claro</option>
+        </select>
+        </div>
+    </form>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+    <h3 class="card-title">Centro de Ayuda</h3>
+    </div>
+    <div class="card-body">
+    <div class="accordion" id="helpAccordion">
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            ¿Cómo cambio mi contraseña?
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#helpAccordion">
+            <div class="accordion-body">
+            Para cambiar tu contraseña, ve a la sección de seguridad y selecciona "Cambiar contraseña".
+            </div>
+        </div>
+        </div>
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            ¿Cómo cambio mi idioma preferido?
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#helpAccordion">
+            <div class="accordion-body">
+            Puedes cambiar el idioma en la sección de "Preferencias de Usuario".
+            </div>
+        </div>
+        </div>
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            ¿Cómo contacto al soporte?
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#helpAccordion">
+            <div class="accordion-body">
+            Si necesitas ayuda adicional, puedes contactar al soporte enviando un correo a soporte movshark.com.
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="card mb-4">
+    <div class="card-header">
+    <h3 class="card-title">Seguridad</h3>
+    </div>
+    <div class="card-body">
+    <div class="accordion" id="securityAccordion">
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="headingPassword">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePassword" aria-expanded="false" aria-controls="collapsePassword">
+            Cambiar Contraseña
+            </button>
+        </h2>
+        <div id="collapsePassword" class="accordion-collapse collapse" aria-labelledby="headingPassword" data-bs-parent="#securityAccordion">
+            <div class="accordion-body">
+            <form>
+                <div class="form-group mb-3">
+                <label for="currentPassword" class="form-label">Contraseña Actual</label>
+                <input type="password" class="form-control" id="currentPassword">
+                </div>
+                <div class="form-group mb-3">
+                <label for="newPassword" class="form-label">Nueva Contraseña</label>
+                <input type="password" class="form-control" id="newPassword">
+                </div>
+                <div class="form-group mb-3">
+                <label for="confirmPassword" class="form-label">Confirmar Nueva Contraseña</label>
+                <input type="password" class="form-control" id="confirmPassword">
+                </div>
+                <button type="button" class="btn btn-primary btn-block mb-3">Cambiar Contraseña</button>
+            </form>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <button class="btn btn-danger btn-block" (click)="logout()">Cerrar Sesión</button>
+    </div>
+    </div>
+</div>
+</div>
+
+<app-footer></app-footer>

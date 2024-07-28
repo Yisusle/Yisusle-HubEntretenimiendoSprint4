@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<div class="content">
+<h2>Películas y Series</h2>
+<div class="posters-grid">
+    <div class="poster" *ngFor="let movie of movies" (click)="openDialog(movie)">
+    <img [src]="movie.poster" alt="{{ movie.title }}">
+    <div class="rating-circle">
+        <span>{{ movie.rating }}</span>
+    </div>
+    <h3>{{ movie.title }}</h3>
+    </div>
+    <div class="poster" *ngFor="let serie of series" (click)="openDialog(serie)">
+    <img [src]="serie.poster" alt="{{ serie.title }}">
+    <div class="rating-circle">
+        <span>{{ serie.rating }}</span>
+    </div>
+    <h3>{{ serie.title }}</h3>
+    </div>
+</div>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<div class="content">
+  <h2>Géneros</h2>
+  <div *ngFor="let genre of genres | keyvalue">
+    <h3>{{ genre.key }}</h3>
+    <div class="posters-grid">
+      <div class="poster" *ngFor="let item of genre.value" (click)="openDialog(item)">
+        <img [src]="item.poster" alt="{{ item.title }}">
+        <div class="rating-circle">
+          <span>{{ item.rating }}</span>
+        </div>
+        <h3>{{ item.title }}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

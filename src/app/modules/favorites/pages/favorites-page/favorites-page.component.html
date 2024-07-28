@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Favoritos</h2>
+  <div *ngIf="favorites.length === 0" class="alert alert-info text-center">
+    <p>No hay favoritos.</p>
+  </div>
+  <div *ngIf="favorites.length > 0" class="row">
+    <div *ngFor="let item of favorites" class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img [src]="item.poster" class="card-img-top" alt="{{ item.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.title }}</h5>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-danger btn-block" (click)="removeFavorite(item.id)">Eliminar de Favoritos</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>{{ data.title }}</h2>
+<mat-dialog-content>
+  <div class="modal-content">
+    <img [src]="data.poster" alt="{{ data.title }}" class="modal-poster">
+    <div class="modal-details">
+      <p><strong>Año:</strong> {{ data.year }}</p>
+      <p><strong>Género:</strong> {{ data.genre }}</p>
+      <p><strong>Rating:</strong> {{ data.rating }}</p>
+      <p><strong>Descripción:</strong> {{ data.description }}</p>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button class="btn btn-secondary" (click)="onClose()">Cerrar</button>
+  <button mat-button class="btn btn-primary" (click)="addToFavorites()">Añadir a Favoritos</button>
+</mat-dialog-actions>

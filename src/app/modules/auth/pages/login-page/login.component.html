@@ -1,0 +1,97 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="form-signin shadow">
+    <!-- Btn to switch from Login to Sign Up -->
+    <div class="p-2 mb-4">
+      <ul class="nav nav-underline" id="pills-tab">
+        <li class="nav-item" id="signup-nav">
+          <button class="btn nav-link" [class.active]="isSignIn" type="button" aria-selected="true" (click)="showSignIn()">Iniciar sesión</button>
+        </li>
+        <li class="nav-item" id="login-nav" role="presentation">
+          <button class="btn nav-link" [class.active]="!isSignIn" type="button" aria-selected="false" (click)="showSignUp()">Crear cuenta</button>
+        </li>
+      </ul>
+    </div>
+    <!-- Login -->
+    <form *ngIf="isSignIn" id="signin-form" (ngSubmit)="onSignIn()" #signInForm="ngForm">
+      <!-- user icon -->
+      <div style="text-align: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor" class="bi bi-person mt-4" viewBox="0 0 16 16">
+          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+        </svg>
+        <h1 class="h3 mb-4 fw-normal">Iniciar sesión</h1>
+      </div>
+      <div class="form-floating">
+        <input type="email" class="form-control mb-1" id="signinEmail" [(ngModel)]="signinEmail" name="signinEmail" required email #signinEmailRef="ngModel">
+        <label for="signinEmail">Correo</label>
+        <div *ngIf="signinEmailRef.invalid && signinEmailRef.touched">
+          <small *ngIf="signinEmailRef.errors?.['required']">El Correo es requerido.</small>
+          <small *ngIf="signinEmailRef.errors?.['email']">El Correo no es válido.</small>
+        </div>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="signinPassword" [(ngModel)]="signinPassword" name="signinPassword" required minlength="5" #signinPasswordRef="ngModel">
+        <label for="signinPassword">Contraseña</label>
+        <div *ngIf="signinPasswordRef.invalid && signinPasswordRef.touched">
+          <small *ngIf="signinPasswordRef.errors?.['required']">La Contraseña es requerida.</small>
+          <small *ngIf="signinPasswordRef.errors?.['minlength']">LaContraseña debe tener al menos 5 caracteres.</small>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary w-30 py-1 m-4" type="submit" [disabled]="signinEmailRef.invalid || signinPasswordRef.invalid">Iniciar sesión</button>
+      </div>
+    </form>
+
+    <!-- Signup -->
+    <form *ngIf="!isSignIn" id="signup-form" (ngSubmit)="onSignUp()" #signUpForm="ngForm">
+      <!-- user icon -->
+      <div style="text-align: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
+          <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+          <path d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
+        </svg>
+        <h1 class="h3 mb-4 fw-normal">Crear cuenta</h1>
+      </div>
+      <div class="row g-2">
+        <div class="col-md">
+          <div class="form-floating">
+            <input type="text" class="form-control mb-1" id="signupName" [(ngModel)]="signupName" name="signupName" required minlength="2" #signupNameRef="ngModel">
+            <label for="signupName">Nombre</label>
+            <div *ngIf="signupNameRef.invalid && signupNameRef.touched">
+              <small *ngIf="signupNameRef.errors?.['required']">El Nombre es requerido.</small>
+              <small *ngIf="signupNameRef.errors?.['minlength']">El Nombre debe tener al menos 2 caracteres.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-floating">
+            <input type="text" class="form-control mb-1" id="signupLastName" [(ngModel)]="signupLastName" name="signupLastName" required minlength="2" #signupLastNameRef="ngModel">
+            <label for="signupLastName">Apellido</label>
+            <div *ngIf="signupLastNameRef.invalid && signupLastNameRef.touched">
+              <small *ngIf="signupLastNameRef.errors?.['required']">El Apellido es requerido.</small>
+              <small *ngIf="signupLastNameRef.errors?.['minlength']">El Apellido debe tener al menos 2 caracteres.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-floating">
+        <input type="email" class="form-control mb-1" id="signupEmail" [(ngModel)]="signupEmail" name="signupEmail" required email #signupEmailRef="ngModel">
+        <label for="signupEmail">Correo</label>
+        <div *ngIf="signupEmailRef.invalid && signupEmailRef.touched">
+          <small *ngIf="signupEmailRef.errors?.['required']">El Correo es requerido.</small>
+          <small *ngIf="signupEmailRef.errors?.['email']">El Correo no es válido.</small>
+        </div>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="signupPassword" [(ngModel)]="signupPassword" name="signupPassword" required minlength="5" #signupPasswordRef="ngModel">
+        <label for="signupPassword">Contraseña</label>
+        <div *ngIf="signupPasswordRef.invalid && signupPasswordRef.touched">
+          <small *ngIf="signupPasswordRef.errors?.['required']">La Contraseña es requerida.</small>
+          <small *ngIf="signupPasswordRef.errors?.['minlength']">La Contraseña debe tener al menos 5 caracteres.</small>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary w-30 py-1 m-4" type="submit" [disabled]="signupNameRef.invalid || signupLastNameRef.invalid || signupEmailRef.invalid || signupPasswordRef.invalid">Registrarse</button>
+      </div>
+    </form>
+  </div>
+</div>
