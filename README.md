@@ -31,6 +31,8 @@ Peliculas y Series ordenadas por genero
 Los favoritos agregados por el usuario.
 ![imagen](https://github.com/user-attachments/assets/7c871130-d6b3-4980-9903-86a310b99080)
 
+Modelo Entidad Relación
+![ModeloEntidadRelación](https://github.com/user-attachments/assets/d914e60b-d3fb-4b53-89e1-e9a4ea5dd486)
 
 
 ### 5. Proceso que seguí para realizar el proyecto
