@@ -1,16 +1,18 @@
 # HubEntretenimiendo
 
-### Sprint 2 y 3
+### Sprint 4
 
 ## Jesus Antonio Leyva Apodaca
 
 ### 1. Resumen del proyecto 
 Este proyecto es un hub de entretenimiento en el cual se muestran peliculas y series a las cuales el usuario las puede agregar a favoritos si lo desea.
 ### 2. Requerimientos tecnicos -
-Utlice Bootstrap y angular materials
+Utlice Bootstrap, angular materials y Express.
 
 ### 3. ¿Como instalar?
-Primero necesitas tener instalado node luego ir a la raiz del proyecto y teclear esto en tu terminal "npm install", depues tambien tienes que tener instalado angular "npm install -g @angular/cli" luego ejecutar "ng serve" para vizualizar el proyecto.
+Primero importar la base de datos en sql sever que esta en la carpeta "BASE DE DATOS".
+Segundo entrar a la carpeta backend necesitas (tener instalado node) y teclear esto en tu terminal "npm install", despues teclear "node indes.js".
+Tercero necesitas tener instalado node luego ir a la raiz del proyecto "angular" y teclear esto en tu terminal "npm install", depues tambien tienes que tener instalado angular "npm install -g @angular/cli" luego ejecutar "ng serve" para vizualizar el proyecto.
 
 ### 4. Capturas de pantalla 
 
@@ -18,16 +20,17 @@ Login del proyecto.
 ![imagen](https://github.com/Yisusle/HubEntretenimiento/assets/155853302/ba4fa25d-75f1-48ac-875c-1951c7cd921f)
 
 Pagina principal del proyecto.
-![imagen](https://github.com/Yisusle/HubEntretenimiento/assets/155853302/f94cee86-53c5-42ce-8a6c-10c2f727be7c)
+![imagen](https://github.com/user-attachments/assets/d4428b51-6155-410f-9cbc-2a866608873e)
 
 Detelles de la pelicula o serie.
-![imagen](https://github.com/Yisusle/HubEntretenimiento/assets/155853302/929924d6-adc6-473e-974f-c4dd78f29144)
+![imagen](https://github.com/user-attachments/assets/9f7b352e-1d46-4e4f-a880-fb046f34827f)
 
 Peliculas y Series ordenadas por genero
-![imagen](https://github.com/Yisusle/HubEntretenimiento/assets/155853302/c76ec21e-ee41-4a6c-ae90-b3b002dd01ab)
+![imagen](https://github.com/user-attachments/assets/6c973906-0683-417f-ab23-5ba4d58ced45)
 
 Los favoritos agregados por el usuario.
-![imagen](https://github.com/Yisusle/HubEntretenimiento/assets/155853302/e28de650-37b9-46f6-98d0-dfa76b746c69)
+![imagen](https://github.com/user-attachments/assets/7c871130-d6b3-4980-9903-86a310b99080)
+
 
 
 ### 5. Proceso que seguí para realizar el proyecto
@@ -37,12 +40,12 @@ Me guie con el curso de angular y viendo tutos en internet.
 
 | Que salio bien? | Que puedo hacer diferente? | Que no salio bien ? |
 ------------------|----------------------------|-----------------------
-| Aprender a hacer cosas en Angular |Trabajar mas rapido y tener mas organizado todo  | centrar los divs jaja, y tener porcentaje en el testing |
+| Aprender a hacer cosas en Angular |Trabajar mas rapido y tener mas conocimiento sobre express  | Implementar los favoritos con la base de datos |
 
 ### Testing y CodeCoverage
-![imagen](https://github.com/user-attachments/assets/711f5c9b-a52c-4d72-9b4c-9b58d00d2a0c)
+![imagen](https://github.com/user-attachments/assets/c6203093-720d-44ba-868a-1d74c24a5639)
 
-![imagen](https://github.com/user-attachments/assets/a41683d1-e2ea-4cb2-b291-545ae80ea35c)
+![imagen](https://github.com/user-attachments/assets/94e2c00a-3abb-4ac4-9f24-72f3b4469fd9)
 
 
 
