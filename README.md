@@ -6,7 +6,7 @@
 
 ### 1. Resumen del proyecto 
 Este proyecto es un hub de entretenimiento en el cual se muestran peliculas y series a las cuales el usuario las puede agregar a favoritos si lo desea.
-### 2. Requerimientos tecnicos -
+### 2. Requerimientos tecnicos 
 Utlice Bootstrap, angular materials y Express.
 
 ### 3. ¿Como instalar?
